@@ -1,41 +1,140 @@
-# Node / React
+# ============================================
+# BHOOMI - Smart Farming Project
+# ============================================
+
+# --------------------------------------------
+# Node.js / React / Vite
+# --------------------------------------------
 node_modules/
 **/node_modules/
-dist/
-build/
 
+dist/
+**/dist/
+
+build/
+**/build/
+
+.cache/
+.parcel-cache/
+
+# Vite
+.vite/
+
+# --------------------------------------------
 # Python
+# --------------------------------------------
 __pycache__/
 **/__pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Virtual environments
 venv/
 .venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 
-# Environment / secrets
+# Python packaging
+.Python
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+develop-eggs/
+downloads/
+sdist/
+wheels/
+pip-wheel-metadata/
+
+# --------------------------------------------
+# Environment variables & secrets
+# --------------------------------------------
 .env
 .env.*
 !.env.example
 
+# Firebase / service account credentials
+serviceAccountKey.json
+**/serviceAccountKey.json
+
+# --------------------------------------------
 # Databases
+# --------------------------------------------
 *.db
 *.sqlite
 *.sqlite3
 
-# IDE
+# --------------------------------------------
+# Large datasets
+# --------------------------------------------
+Plant Village Dataset/
+**/Plant Village Dataset/
+
+# --------------------------------------------
+# IDE / Editors
+# --------------------------------------------
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# OS
+# --------------------------------------------
+# Jupyter Notebook
+# --------------------------------------------
+.ipynb_checkpoints/
+
+# --------------------------------------------
+# Testing / Coverage
+# --------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache/
+nosetests.xml
+coverage.xml
+
+# --------------------------------------------
+# Type checking / Python tools
+# --------------------------------------------
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# --------------------------------------------
+# OS generated files
+# --------------------------------------------
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Large datasets
-Plant Village Dataset/
+# --------------------------------------------
+# Temporary files
+# --------------------------------------------
+*.log
+*.tmp
+*.temp
+tempCodeRunnerFile.py
 
-# Python model files - uncomment if your model is too large for GitHub
-# *.pkl
-# *.joblib
+# --------------------------------------------
+# Python model files
+# --------------------------------------------
+# BHOOMI model files are currently small enough
+# for GitHub, so they remain tracked.
+#
+# If a future model exceeds GitHub's file-size
+# limit, add *.pkl or *.keras here and use Git LFS.
+# --------------------------------------------
 
-# Firebase credentials
-serviceAccountKey.json
-**/serviceAccountKey.json
+# --------------------------------------------
+# Firebase local secrets
+# --------------------------------------------
+.streamlit/secrets.toml
